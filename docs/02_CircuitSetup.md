@@ -18,4 +18,10 @@ The relay has multiple connections, so let break down real quick.
 
 ![](../images/RelayExplanation.jpg)
 
-//TODO chapter finish
+Now we know how the relay works. We need to connect the pump and our power supply (The arduino in this case) to the relay, and then attach ground connections as well. 
+
+> Once connected, our board must follow this diagram 
+
+![Circuit explained](../images/Cyberplant2099.png)
+
+Congratulations! The hardware part is finished!
