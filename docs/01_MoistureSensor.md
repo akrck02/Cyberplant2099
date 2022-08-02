@@ -43,6 +43,6 @@ Well, now we have the MIN and MAX values for our specific sensors.
 
 
 # Keep reading
-[0. Index](../README.md)
-
-[1. Next chapter](./02_CircuitSetup.md)
+[Index](../README.md)
+&nbsp;&nbsp;
+[Next page >](./02_CircuitSetup.md)

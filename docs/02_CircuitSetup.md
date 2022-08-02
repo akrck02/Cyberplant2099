@@ -25,3 +25,10 @@ Now we know how the relay works. We need to connect the pump and our power suppl
 ![Circuit explained](../images/Cyberplant2099.png)
 
 Congratulations! The hardware part is finished!
+
+# Keep reading
+[ < Last page](./01_MoistureSensor.md)
+&nbsp;&nbsp;
+[Index](../README.md)
+&nbsp;&nbsp;
+[Next page >](./03_Software.md)
