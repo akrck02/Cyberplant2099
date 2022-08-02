@@ -11,6 +11,11 @@ If you like this type of things, make sure to check out my other projects, contr
 Thank you again for reading this, I will keep working on open and free source code many years! 📆⌨️
 
 
+# Cyberplant 2099: images.
+![Cyberplant](../images/Plant2.jpg)
+![Cyberplant circuits](../images/Plant1.jpg)
+
+
 # Keep reading
 [ < Last page](./03_Software.md)
 &nbsp;&nbsp;
