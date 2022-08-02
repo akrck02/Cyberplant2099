@@ -12,6 +12,10 @@ I decided to call it **Cyberplant** 😎
 
 [2. Setting up the circuit](./docs/02_CircuitSetup.md)
 
+[3. Software structure](./docs/03_Software.md)
+
+[4. Conclusion](./docs/04_conclusion.md)
+
 # Hardware used 
 
 > 💖 &nbsp; | &nbsp; Elegoo (Arduino) Uno R3
