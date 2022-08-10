@@ -1,12 +1,11 @@
-void setup() {
-
 #define SERIAL_PORT 9600
 
 #define MOISTURE_SENSOR_PIN A0
 #define PUMP_PIN 12
 
 #define MOISTURE_SENSOR_DRY 537
-#define MOISTURE_SENSOR_WET 290
+#define MOISTURE_SENSOR_WET 210
+
 #define MOISTURE_OFFSET 35 // This constant will be different on each plant, check it
 #define WATERING_TIME 1000
 
@@ -41,7 +40,7 @@ void loop() {
   }
 
   // Print happy plant messages
-  Serial.print("Cyberplant: my humidity :is ");
+  Serial.print("Cyberplant: my humidity is ");
   Serial.print(percent);
   Serial.println("%\n");
 
@@ -52,10 +51,13 @@ void loop() {
  * Get the humidity percentage of the cyberplant
  */
 int getHumidityPercent(){
-  int sensorValue = analogRead(MOISTURE_SENSOR_PIN);
+  
+  int sensorValue = analogRead(MOISTURE_SENSOR_PIN) - MOISTURE_SENSOR_WET;
+  int minMoisture = 0;
+  int maxMoisture = MOISTURE_SENSOR_DRY - MOISTURE_SENSOR_WET;
 
   // Calculate percentage
-  int percent = map(sensorValue,MOISTURE_SENSOR_WET,MOISTURE_SENSOR_DRY,100,0);
+  int percent = 100 - (((double) sensorValue)/ maxMoisture) * 100;
 
   // Normalizing percentages (The sensor precission can change with time)
   if(percent > 100){
@@ -70,7 +72,7 @@ int getHumidityPercent(){
 /**
  * Water the cyberplant
  */
-void water(){
+void water() {
    digitalWrite(PUMP_PIN,LOW);  
    delay(WATERING_TIME);
    digitalWrite(PUMP_PIN,HIGH);  
